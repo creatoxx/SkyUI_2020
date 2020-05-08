@@ -21,4 +21,4 @@ for all instances it is important to make sure to keep the folder structure inta
 6. clone or download the files provided by this source, override your current package
 7. (optional) clone or download greensock, and install AS2 content(com folder) into the src/CLIK folder of your package
 
-Refer to [https://www.nexusmods.com/skyrimspecialedition/images/69814](this image) to get an idea on the file structure.
+Refer to [this image](https://www.nexusmods.com/skyrimspecialedition/images/69814) to get an idea on the file structure.
