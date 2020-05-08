@@ -11,5 +11,5 @@ https://github.com/Odie/skyui-vr
 
 Additionally to the available sources, reverse engineered, up to date Skyrim SE UI files will be provided whereever needed. Uploads will happen by menu/UI type. The final goal is to provide source files for the whole of Skyrim SE, not only SkyUI. Tools used:
 
-1. [url=https://www.adobe.com/cy_en/downloads/other-downloads.html]Adobe Flash 6[/url], Action Script 2.0, Flash Player 11.2 standards
+1. [Adobe Flash 6](url=https://www.adobe.com/cy_en/downloads/other-downloads.html), Action Script 2.0, Flash Player 11.2 standards
 2. 
