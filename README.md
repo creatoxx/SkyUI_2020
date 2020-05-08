@@ -20,3 +20,5 @@ for all instances it is important to make sure to keep the folder structure inta
 5. override the Mardoxx/Schlangster package with Odies
 6. clone or download the files provided by this source, override your current package
 7. (optional) clone or download greensock, and install AS2 content(com folder) into the src/CLIK folder of your package
+
+https://www.nexusmods.com/skyrimspecialedition/images/69814
