@@ -8,3 +8,5 @@ Additionally to the available sources, reverse engineered, up to date Skyrim SE 
 2. [jPexs Decompiler](https://github.com/jindrapetrik/jpexs-decompiler)
 
 None of the files will be provided standalone. So the prerequisite will always be to first install the original SkyUI, or the sources provided by Mardoxx and Odie.
+
+How to install?
