@@ -10,3 +10,13 @@ Additionally to the available sources, reverse engineered, up to date Skyrim SE 
 None of the files will be provided standalone. So the prerequisite will always be to first install the original SkyUI, or the sources provided by Mardoxx and Odie.
 
 ### How to install?
+
+for all instances it is important to make sure to keep the folder structure intact!
+
+1. clone or download source provided by Mardoxx
+2. clone or download the SkyUI source provided by Schlangster
+3. override Mardoxx's source with Schlangster's
+4. clone or download Odie's source
+5. override the Mardoxx/Schlangster package with Odies
+6. clone or download the files provided by this source, override your current package
+7. (optional) clone or download greensock, and install AS2 content(com folder) into the src/CLIK folder of your package
