@@ -1106,8 +1106,8 @@ class SystemPage extends MovieClip
 				break;
 
 			case SystemPage.SAVE_LOAD_STATE:
-      case SystemPage.CHARACTER_LOAD_STATE:
-      case SystemPage.CHARACTER_SELECTION_STATE:
+     			case SystemPage.CHARACTER_LOAD_STATE:
+      			case SystemPage.CHARACTER_SELECTION_STATE:
 				FocusHandler.instance.setFocus(SaveLoadListHolder.List_mc, 0);
 				SaveLoadListHolder.List_mc.disableSelection = false;
 				break;
