@@ -138,7 +138,7 @@ class SystemPage extends MovieClip
 		{
 			return false;
 		};		
-		
+		SetShowMod(true);//make sure vanilla mod menu is enabled
 		SaveLoadListHolder.addEventListener("saveGameSelected", this, "ConfirmSaveGame");
 		SaveLoadListHolder.addEventListener("loadGameSelected", this, "ConfirmLoadGame");
 		SaveLoadListHolder.addEventListener("saveListCharactersPopulated", this, "OnSaveListCharactersOpenSuccess");
@@ -180,6 +180,7 @@ class SystemPage extends MovieClip
 	function SetShowMod(bshow) {
 		_showModMenu = bshow;
 		//CrEaToXx: downside block was removed for the VR version, or not added?
+		//this makes sure the entry list is updated if the vanilla Mod selection is enabled
 		if(_showModMenu && CategoryList.entryList && CategoryList.entryList.length > 0)
 		{
 			CategoryList.entryList.splice(SystemPage.MOD_MANAGER_BUTTON_INDEX, 0, {text: "$MOD MANAGER"});
@@ -493,11 +494,10 @@ class SystemPage extends MovieClip
 		if (iCurrentState == SystemPage.MAIN_STATE)
 		{
 			var categoryName = CategoryList.entryList[event.index].text;
-			// this is how it exists in SkyUI 5.2, but using it breaks entry selection
-			/*if(!_showModMenu && categoryName >= SystemPage.MOD_MANAGER_BUTTON_INDEX)
-			{
+			if(!_showModMenu && categoryName >= SystemPage.MOD_MANAGER_BUTTON_INDEX)
+			{//this makes sure the index is increased by 1, if vanilla Mod selection is enabled
 				categoryName = categoryName + 1;
-			}*/
+			}
 			switch (categoryName) 
 			{
 				case "$QUICKSAVE":
@@ -715,7 +715,7 @@ class SystemPage extends MovieClip
 				{text: "$Look Sensitivity", movieType: 0},
 				{text: "$Vibration", movieType: 2},
 				{text: "$360 Controller", movieType: 2},
-				{text:	"$Survival Mode",movieType:2}, //CrEaToXx: added missing survival mode
+				{text: "$Survival Mode", movieType :2}, //CrEaToXx: added missing survival mode if CC plugin is enabled
 				{text: "$Difficulty", movieType: 1, options: ["$Very Easy", "$Easy", "$Normal", "$Hard", "$Very Hard", "$Legendary"]},
 				{text: "$Show Floating Markers", movieType: 2},
 				{text: "$Save on Rest", movieType: 2},
@@ -917,7 +917,7 @@ class SystemPage extends MovieClip
 		EndState();
 	}
 	
-	function RefreshSystemButtons()
+	function RefreshSystemButtons()//check for enabled vanilla mod selection, so key buttons will show correctly
 	{
 		if(_showModMenu)
 		{
@@ -1200,7 +1200,7 @@ class SystemPage extends MovieClip
  
 	function UpdatePermissions()
 	{
-		if(_showModMenu)
+		if(_showModMenu)//this is where the update of the settings entry list is handled
 		{
 			GameDelegate.call("SetSaveDisabled", [CategoryList.entryList[0], CategoryList.entryList[1], CategoryList.entryList[2], CategoryList.entryList[4], CategoryList.entryList[6], CategoryList.entryList[8], false]);
 			CategoryList.entryList[7].disabled = false;
