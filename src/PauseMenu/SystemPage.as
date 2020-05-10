@@ -1,4 +1,4 @@
-﻿import Shared.ButtonTextArtHolder;
+import Shared.ButtonTextArtHolder;
 import gfx.io.GameDelegate;
 import gfx.ui.InputDetails;
 import Shared.GlobalFunc;
@@ -115,7 +115,7 @@ class SystemPage extends MovieClip
 		bShowKinectTunerButton = false;
 		iPlatform = 0;
 		bDefaultButtonVisible = false;
-		_showModMenu = false;
+		_showModMenu = false;//do we need this anymore?
 	}
 
 	function GetIsRemoteDevice() {
